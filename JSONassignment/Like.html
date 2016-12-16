@@ -1,0 +1,136 @@
+<html>
+<head>
+<style type="text/css">
+	div.image{
+position:absolute;
+
+left:40%;
+
+	}
+	div.button
+	{
+
+		position:relative;
+		top:45%;
+		left:40%;
+		width:22%;
+		
+	}
+
+#button2{
+position:absolute;
+		top:%;
+		left:40%;
+		width:22%;
+
+}
+	#like1{
+
+position: absolute;
+top:60%;
+}
+#dislike1{
+position: absolute;
+right:10%;
+top:10%;
+}
+
+		
+</style>
+</head>
+
+<body onload="lo()">
+<div class="image">
+<img src="thTF8LO3WH.jpg">
+</body>
+</div>
+<div class="button">
+
+<button id="" onclick="like1()"><img src=""><img src="like.jpg" style="height: 20px; width:20px; "> like</button>
+<span id="span_like"></span>
+
+
+<button id="dislike1" onclick="Dislike()"><img src="dislike.jpg" style="height: 25px; width:40px; "></button>
+<span style="float: right;" id="span_dislike">dislike</span>
+
+
+	
+<script>
+var count;
+
+function like1()
+{
+count=parseInt(localStorage.getItem("like"));
+
+if (typeof(Storage) !== "undefined") {
+    // Store
+    count=count+1;
+    document.getElementById("span_like").innerHTML =count;
+    localStorage.setItem("like", count);
+    // Retrieve
+    
+} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+
+}
+
+function lo()
+{   
+	var n = localStorage.getItem('like');
+ 
+if (n === null) {
+    localStorage.setItem("like",0);
+
+} else {
+	document.getElementById("span_like").innerHTML = localStorage.getItem("like");
+    //document.getElementById("span_dislike").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+    
+ }
+
+
+
+function Dislike()
+{
+count=parseInt(localStorage.getItem("unlike"));
+
+if (typeof(Storage) !== "undefined") {
+    // Store
+    count=count+1;
+    document.getElementById("span_dislike").innerHTML =count;
+    localStorage.setItem("unlike", count);
+    // Retrieve
+    
+} else {
+    document.getElementById("span_dislike").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+
+}
+
+function lo()
+{   
+	var n = localStorage.getItem('like');
+ var n1 = localStorage.getItem('unlike');
+if (n === null  && n1 === null) {
+    localStorage.setItem("unlike",0);
+    localStorage.setItem("like",0);
+
+} else {
+	document.getElementById("span_like").innerHTML = localStorage.getItem("like");
+	document.getElementById("span_dislike").innerHTML = localStorage.getItem("unlike");
+    //document.getElementById("span_dislike").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+    
+ }
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
