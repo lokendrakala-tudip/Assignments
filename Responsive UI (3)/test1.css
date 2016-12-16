@@ -1,0 +1,16 @@
+
+ .sqr { 
+    border: 3px solid;
+    background-color:red;
+    position: relative;
+    width: 50vw;
+    height: 50vw;
+    margin:auto;
+  }
+
+  .content {
+    font-size: 2em;
+    padding-top: 40%;
+    color:white;
+    text-align:center;
+  }
