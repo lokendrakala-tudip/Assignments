@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+var strokeCount = 0;
+
+$(function(){
+
+    $("#countstroke").keyup(function(){
+
+  $("#second").val($("#countstroke").val().length+1);
+    });
+});
+</script>
+</head>
+<body>
+
+<p>Text:<input type="text" id="countstroke" placeholder="enter text"/></p>
+
+<p>Count:<input type="text" id="second" placeholder="count"/></p>
+
+
+</body>
+</html>
+
